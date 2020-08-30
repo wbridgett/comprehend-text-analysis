@@ -1,0 +1,25 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Require the autoloader.
+ */
+if (file_exists(__DIR__.'/../../autoload.php')) {
+    require __DIR__.'/../../autoload.php';
+} else {
+    require __DIR__.'/vendor/autoload.php';
+}
+
+use Dotenv\Dotenv;
+use Symfony\Component\Console\Application;
+use wbridgett\TextAnalysis\Commands;
+
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+$application = new Application('Text Analysis', '1.0.0');
+
+// ... register commands
+$application->add(new Commands\ProcessExcelCommand);
+
+$application->run();

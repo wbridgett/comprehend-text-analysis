@@ -1,0 +1,22 @@
+{
+    "name": "wbridgett/comprehend-text-analysis",
+    "type": "project",
+    "authors": [
+        {
+            "name": "wbridgett",
+            "email": "wilson.bridgett@gmail.com"
+        }
+    ],
+    "require": {
+        "symfony/console": "^5.0",
+        "aws/aws-sdk-php": "^3.133",
+        "vlucas/phpdotenv": "^4.1",
+        "phpoffice/phpspreadsheet": "^1.11",
+        "tightenco/collect": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "wbridgett\\TextAnalysis\\": "src/"
+        }
+    }
+}
